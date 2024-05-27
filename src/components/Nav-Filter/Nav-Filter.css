@@ -1,0 +1,28 @@
+.nav-filter-button {
+  background-color: #FFFFFF;
+  color: #4A4A4A;
+  border: 1px solid #DFE5EC;
+  width: 168px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+}
+
+.nav-filter-button:hover {
+  background-color: #2196F3;
+}
+
+.nav-filter-button:active {
+  background-color: #2196F3;
+}
+
+.buttons-bar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

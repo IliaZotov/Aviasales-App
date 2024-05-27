@@ -1,0 +1,44 @@
+.checkbox-container input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #9ABBCE;
+  /* Изменяем толщину и цвет рамки */
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.checkmark:hover {
+  border-color: #2196F3;
+}
+
+/* Стили для псевдоэлемента, когда чекбокс отмечен */
+.checkbox-container input:checked+.checkmark {
+  border-color:#2196F3;
+  /* Изменяем цвет рамки при отмеченном состоянии */
+}
+
+/* Стили для псевдоэлемента, который будет выглядеть как галочка */
+.checkmark::after {
+  content: ''; /* Обязательно наличие content */
+  display: none; /* По умолчанию скрываем */
+  width: 6px;
+  height: 11px;
+  border: solid #2196F3; /* Цвет галочки */
+  border-width: 0 2px 2px 0; /* Форма галочки */
+  transform: rotate(45deg); /* Поворот на 45 градусов */
+  margin-left: 6px;
+}
+
+/* Стили для псевдоэлемента, когда чекбокс отмечен */
+.checkbox-container input:checked + .checkmark::after {
+  display: block; /* Показываем галочку при отмеченном состоянии */
+}

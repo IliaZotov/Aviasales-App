@@ -1,0 +1,26 @@
+.side-filter-container {
+  background-color: #FFFFFF;
+  width: 232px;
+  height: 252px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.side-filter-title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  /* Add some space between the title and the list */
+}
+
+.side-filter-list {
+  list-style: none;
+}
+
+.side-filter-item {
+  margin-bottom: 10px;
+  display: flex;
+}
