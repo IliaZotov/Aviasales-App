@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Checkbox.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkboxSwitch, checkboxSwitchAll } from '../redux/Action';
 
-const Checkbox = () => {
-  const [isChecked, setIsChecked] = useState(false);
+const Checkbox = ({ id }) => {
+  const dispatch = useDispatch();
+  const isActive = useSelector(
+    (state) => state.items.find((item) => item.id === id).isActive
+  );
+  const [isChecked, setIsChecked] = useState(isActive);
 
-  const toggleCheckbox = () => {
-    setIsChecked(!isChecked);
+  useEffect(() => {
+    setIsChecked(isActive);
+  }, [isActive]);
+
+  console.log(`Checkbox ${id} isActive:`, isActive);
+
+  const handleChange = () => {
+    dispatch(checkboxSwitch(id, !isActive));
   };
 
   return (
@@ -14,7 +26,7 @@ const Checkbox = () => {
         className='checkbox'
         type='checkbox'
         checked={isChecked}
-        onChange={toggleCheckbox}
+        onChange={handleChange}
       />
       <span className='checkmark'></span>
     </label>

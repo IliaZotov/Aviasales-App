@@ -20,7 +20,7 @@ const TicketCard = () => {
   };
 
   return (
-    <li className='ticket-card'>
+    <div className='ticket-card'>
       <div className='card-header'>
         <h2 className='card-header__price'>{price} Р</h2>
         <div className='card-header__logo'>
@@ -82,7 +82,7 @@ const TicketCard = () => {
           </p>
         </div>
       </div>
-    </li>
+    </div>
   );
 };
 
