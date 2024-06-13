@@ -14,11 +14,10 @@ const tabsSlicer = createSlice({
   reducers: {
     changeTab: (state, action) => {
       const tabName = action.payload;
-      state.tabs = state.tabs.map((tab) =>
-        tab.name === tabName
-          ? { ...tab, isActive: true }
-          : { ...tab, isActive: false },
-      );
+      state.tabs = state.tabs.map((tab) => ({
+        ...tab,
+        isActive: tab.name === tabName,
+      }));
     },
   },
 });
