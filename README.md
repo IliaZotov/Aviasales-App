@@ -1,1 +1,1 @@
-[Vercel](aviasales-app-snowy.vercel.app)
+[Vercel Aviasales-App](https://aviasales-app-git-master-ilya-zs-projects-136eae07.vercel.app/)
