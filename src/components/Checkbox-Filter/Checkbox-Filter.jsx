@@ -1,11 +1,11 @@
 import React from 'react';
-import './Side-Filter.css';
-import Checkbox from '../Checkbox/Checkbox';
+import './Checkbox-Filter.scss';
 import { useSelector } from 'react-redux';
 import uniqid from 'uniqid';
+import Checkbox from '../Checkbox/Checkbox';
 
-const SideFilter = () => {
-  const items = useSelector((state) => state.items);
+const CheckboxFilter = () => {
+  const items = useSelector((state) => state.checkboxReducer.items);
   const elemnts = items.map((item) => {
     return (
       <li className='side-filter-item' key={uniqid()}>
@@ -22,4 +22,4 @@ const SideFilter = () => {
   );
 };
 
-export default SideFilter;
+export default CheckboxFilter;

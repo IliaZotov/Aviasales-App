@@ -1,9 +1,9 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
-import NavFilter from '../Nav-Filter/Nav-Filter';
-import SideFilter from '../Side-Filter/Side-Filter';
+import TabsFilter from '../Tabs-Filter/Tabs-Filter';
+import SideFilter from '../Checkbox-Filter/Checkbox-Filter';
 import ShowMoreButton from '../Show-More-Button/Show-More-Button';
-import './App.css';
+import './App.scss';
 import TicketsList from '../Tickets-List/Tickets-List';
 
 const App = () => {
@@ -13,9 +13,8 @@ const App = () => {
       <div className='content'>
         <SideFilter />
         <div className='wrapper'>
-          <NavFilter />
+          <TabsFilter />
           <TicketsList />
-          <ShowMoreButton/>
         </div>
       </div>
     </div>

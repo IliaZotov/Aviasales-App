@@ -1,12 +1,8 @@
-import { CHECKBOX_SWITCH, CHECKBOX_SWITCH_ALL } from './Types';
+import CHECKBOX_SWITCH from './Types';
 
-export const checkboxSwitch = (id) => ({
+const checkboxSwitch = (id) => ({
   type: CHECKBOX_SWITCH,
   id,
-
 });
 
-export const checkboxSwitchAll = (id, isActive) => ({
-  type: CHECKBOX_SWITCH_ALL,
-  id,
-});
+export default checkboxSwitch;
