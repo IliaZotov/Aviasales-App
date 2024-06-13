@@ -21,16 +21,17 @@ const checkboxReducer = (state = initialState, action) => {
         }));
         return { ...state, items: updatedItems };
       }
+
       const updatedItems = state.items.map((item) =>
         item.id === action.id ? { ...item, isActive: !item.isActive } : item,
       );
 
-      const isEveryActive = updatedItems
+      const isEveryActiveExceptAll = updatedItems
         .slice(1)
         .every((item) => item.isActive);
 
       const finalItems = updatedItems.map((item) =>
-        item.id === 1 ? { ...item, isActive: isEveryActive } : item,
+        item.id === 1 ? { ...item, isActive: isEveryActiveExceptAll } : item,
       );
 
       return {
