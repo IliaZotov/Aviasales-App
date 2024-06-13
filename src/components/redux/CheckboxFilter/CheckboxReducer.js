@@ -22,17 +22,19 @@ const checkboxReducer = (state = initialState, action) => {
         }));
         return { ...state, items: updatedItems };
       }
-      const updatedItems = state.items.map((item) =>
-        item.id === action.id ? { ...item, isActive: !item.isActive } : item,
-      );
+      const updatedItems = state.items.map((item) => {
+        return item.id === action.id
+          ? { ...item, isActive: !item.isActive }
+          : item;
+      });
 
       const isEveryActive = updatedItems
         .slice(1)
         .every((item) => item.isActive);
 
-      const finalItems = updatedItems.map((item) =>
-        item.id === 1 ? { ...item, isActive: isEveryActive } : item,
-      );
+      const finalItems = updatedItems.map((item) => {
+        return item.id === 1 ? { ...item, isActive: isEveryActive } : item;
+      });
 
       return {
         ...state,
