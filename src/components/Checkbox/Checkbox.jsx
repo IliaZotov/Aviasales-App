@@ -15,8 +15,6 @@ const Checkbox = ({ id }) => {
     setIsChecked(isActive);
   }, [isActive]);
 
-  // console.log(`Checkbox ${id} isActive:`, isActive);
-
   const handleChange = () => {
     dispatch(checkboxSwitch(id, !isActive));
   };

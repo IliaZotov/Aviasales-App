@@ -25,9 +25,8 @@ const checkboxReducer = (state = initialState, action) => {
       const updatedItems = state.items.map((item) => {
         return item.id === action.id
           ? { ...item, isActive: !item.isActive }
-          : item;
+          : { ...item, isActive: false };
       });
-
       const isEveryActive = updatedItems
         .slice(1)
         .every((item) => item.isActive);

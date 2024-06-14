@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import './Tickets-List.scss';
-import uniqid from 'uniqid';
 import { useDispatch, useSelector } from 'react-redux';
 import TicketCard from '../Ticket-Card/Ticket-Card';
 import { fetchGetId, fetchGetTickets } from '../redux/API/apiAction';
@@ -109,9 +108,9 @@ const TicketsList = () => {
         {!errorMessage &&
           filterTabs(filtredTicekts)
             .slice(0, visibleTickets)
-            .map((ticket) => {
+            .map((ticket, i) => {
               return (
-                <li className='card' key={uniqid()}>
+                <li className='card' key={i}>
                   <TicketCard
                     price={ticket.price}
                     carrier={ticket.carrier}

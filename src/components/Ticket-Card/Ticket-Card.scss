@@ -1,5 +1,5 @@
 .ticket-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -18,7 +18,7 @@
   width: 120px;
   height: 30px;
   border-radius: 4px;
-  color: #2196F3;
+  color: #2196f3;
   font-family: 'Open Sans';
 }
 
@@ -31,12 +31,20 @@
 
 .ticket-card__content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   font-family: 'Open Sans';
 }
 
+.ticket-card__from-info {
+  display: flex;
+}
+
+.ticket-card__to-info {
+  display: flex;
+}
+
 .ticket-card__title {
-  color: #A0B0B9;
+  color: #a0b0b9;
 }
 
 .ticket-card__city-time,
@@ -49,15 +57,11 @@
 .ticket-card__title,
 .ticket-card__value {
   width: 150px;
-  /* Уменьшим ширину, чтобы текст помещался */
   height: 20px;
   border-radius: 4px;
   margin-bottom: 10px;
-  /* Уменьшим отступ */
   white-space: nowrap;
-  /* Предотвратим перенос текста на новую строку */
 }
-
 
 .ticket-card__value {
   width: 150px;

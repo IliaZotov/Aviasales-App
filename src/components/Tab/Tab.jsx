@@ -9,7 +9,7 @@ const Tab = ({ label, name, isActive }) => {
   return (
     <div>
       <button
-        type='button'
+        type='radio'
         className={`tab-filter-button-${isActive ? 'active' : 'disable'}`}
         onClick={() => {
           handleChangeTab(name);

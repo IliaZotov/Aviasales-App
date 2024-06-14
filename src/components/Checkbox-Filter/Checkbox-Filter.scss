@@ -13,7 +13,6 @@
 .side-filter-title {
   margin-bottom: 10px;
   text-transform: uppercase;
-  /* Add some space between the title and the list */
 }
 
 .side-filter-list {
@@ -23,4 +22,10 @@
 .side-filter-item {
   margin-bottom: 10px;
   display: flex;
+}
+
+.side-filter-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }

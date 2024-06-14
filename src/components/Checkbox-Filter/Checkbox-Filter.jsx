@@ -9,8 +9,10 @@ const CheckboxFilter = () => {
   const elemnts = items.map((item) => {
     return (
       <li className='side-filter-item' key={uniqid()}>
-        <Checkbox id={item.id} />
-        <span>{item.name}</span>
+        <label className='side-filter-label'>
+          <Checkbox id={item.id} />
+          <span>{item.name}</span>
+        </label>
       </li>
     );
   });
